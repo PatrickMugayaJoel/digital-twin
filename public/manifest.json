@@ -1,0 +1,9 @@
+{
+  "short_name": "Digital Twin",
+  "name": "Digital Twin",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
