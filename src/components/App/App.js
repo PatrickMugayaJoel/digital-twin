@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
+import SidePanel from './../SidePanel/SidePanel';
+import CesiumView from './../CesiumView/CesiumView';
 
 function App() {
   return (
     <div className="App">
-      Our app's code goes here.
+      <SidePanel  className="panel"/>
+      <CesiumView  className="CS_view"/>
     </div>
   );
 }

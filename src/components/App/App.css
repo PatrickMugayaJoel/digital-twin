@@ -1,1 +1,15 @@
+.App {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px;
+    background: lightgray;
+}
 
+.panel {
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+
+.CS_view {
+    flex-grow: 2;
+}
