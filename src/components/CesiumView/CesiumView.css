@@ -7,3 +7,7 @@
     border-radius: 4px;
     background-color: darkslategrey;
 }
+
+.cesium_field > :first-child {
+    height: 100%;
+}
