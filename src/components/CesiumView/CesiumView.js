@@ -1,9 +1,10 @@
 import React from 'react';
 import './CesiumView.css';
 import { Viewer, Entity } from "resium";
-import { Cartesian3 } from "cesium";
+import { Cartesian3, Ion } from "cesium";
 
 function CesiumView() {
+  Ion.defaultAccessToken = process.env.REACT_APP_CESIUM_TOKEN;
   return (
   <div className="cesium_field">
       <Viewer>
