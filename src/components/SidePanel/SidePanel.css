@@ -1,4 +1,12 @@
 .side_panel {
-    margin: 2px;
-    width: 100%;
+    margin: 2px 2px 2px 2px;
+    width: 40%;
+    flex-grow: 1;
+    min-width: 250px;
+    border-radius: 5px;
+    background: #16213E;
+    height: calc(100% - 4px);
+    display: inline-grid;
+    grid-template-columns: 20% 80%;
+    padding: 2px;
 }

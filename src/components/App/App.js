@@ -6,7 +6,7 @@ import CesiumView from './../CesiumView/CesiumView';
 function App() {
   return (
     <div className="App">
-      <SidePanel  className="panel"/>
+      <SidePanel />
       <CesiumView  className="CS_view"/>
     </div>
   );

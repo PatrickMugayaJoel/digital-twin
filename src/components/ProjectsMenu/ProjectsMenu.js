@@ -5,14 +5,14 @@ import PrimaryButton from './../PrimaryButton/PrimaryButton';
 
 function ProjectsMenu() {
   return (
-    <div className="projects_field">
-      <div>
-        <h2>PROJECTS</h2> <br/>
-        <i>.52</i>
+    <div className="projects_field grid-item">
+      <div className="projects_heading">
+        <h1>PROJECTS</h1>
+        <span> &#9899; 52</span>
       </div>
-      <div className="project_links">
+      <ul className="project_links">
         <ProjectLink />
-      </div>
+      </ul>
       <PrimaryButton />
     </div>
   );

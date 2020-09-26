@@ -3,7 +3,7 @@ import './PrimaryButton.css';
 
 function PrimaryButton() {
   return (
-    <button className="add_project_btn"></button>
+    <button className="add_project_btn">&#43; Add Project</button>
   );
 }
 

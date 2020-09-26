@@ -1,4 +1,9 @@
 .cesium_field {
-    margin-right: 2px;
+    flex-grow: 2;
+    margin: 2px 1px 2px 5px;
     width: 100%;
+    min-height: 400px;
+    height: 100%;
+    border-radius: 4px;
+    background-color: darkslategrey;
 }

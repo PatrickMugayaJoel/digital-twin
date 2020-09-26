@@ -1,5 +1,18 @@
 .projects_field {
-    padding: 2px;
-    width: 100%;
-    background: #16213E;
+    padding: 10px;
+}
+
+.projects_heading h1 {
+    margin-bottom: 0px;
+}
+
+.projects_heading {
+    margin-bottom: 10px;
+    color: #A3E3C4;
+}
+
+ul.project_links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

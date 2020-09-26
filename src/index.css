@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 400px;
+  min-width: 900px;
+  height: 99.7vh;
+}
+
+#root {
+  height: inherit;
 }
 
 code {

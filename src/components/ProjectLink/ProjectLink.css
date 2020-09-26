@@ -1,5 +1,15 @@
-.project_link {
-    padding: 1px;
+li.project_link_item {
+    padding: 5px 10px;
     width: auto;
     background: #0F3460;
+    border: 1px solid #1A1A2E;
+}
+
+li.project_link_item:hover, li.project_link_item:active {
+    background: #053A79;
+    color: #A3E3C4;;
+}
+
+h3 {
+    margin: 0px;
 }

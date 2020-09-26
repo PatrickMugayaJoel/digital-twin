@@ -3,10 +3,10 @@ import './ProjectLink.css';
 
 function ProjectLink() {
   return (
-    <div className="project_link">
-      <h3>Project Name</h3> <br />
+    <li className="project_link_item">
+      <h3>Project Name</h3>
       <span>city, state</span>
-    </div>
+    </li>
   );
 }
 

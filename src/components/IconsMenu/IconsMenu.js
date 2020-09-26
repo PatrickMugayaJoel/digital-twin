@@ -3,7 +3,7 @@ import './IconsMenu.css';
 
 function IconsMenu() {
   return (
-    <div className="icons_menu"></div>
+    <div className="icons_menu grid-item"></div>
   );
 }
 
