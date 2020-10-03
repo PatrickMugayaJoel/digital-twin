@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProjectsMenu.css';
+import './ProjectsMenu.scss';
 import ProjectLink from './../ProjectLink/ProjectLink';
 import PrimaryButton from './../PrimaryButton/PrimaryButton';
 

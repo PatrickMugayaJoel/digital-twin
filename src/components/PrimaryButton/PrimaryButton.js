@@ -1,5 +1,5 @@
 import React from 'react';
-import './PrimaryButton.css';
+import './PrimaryButton.scss';
 
 function PrimaryButton() {
   return (

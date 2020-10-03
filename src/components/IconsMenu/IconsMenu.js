@@ -1,5 +1,5 @@
 import React from 'react';
-import './IconsMenu.css';
+import './IconsMenu.scss';
 
 function IconsMenu() {
   return (

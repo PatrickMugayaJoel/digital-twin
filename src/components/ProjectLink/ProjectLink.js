@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProjectLink.css';
+import './ProjectLink.scss';
 
 function ProjectLink() {
   return (

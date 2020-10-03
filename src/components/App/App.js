@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import SidePanel from './../SidePanel/SidePanel';
 import CesiumView from './../CesiumView/CesiumView';
 

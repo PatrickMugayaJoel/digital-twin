@@ -1,9 +1,11 @@
+@import 'src/theme.scss';
+
 button.add_project_btn {
     padding: 2px;
     margin: 4px 0px;
     width: 100%;
     height: 40px;
-    background: #17B794;
+    background: $button-pri-color;
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -17,10 +19,10 @@ button.add_project_btn {
 }
   
 button.add_project_btn:hover {
-    background-color: #46C989;
+    background-color: $button-pri-color-active;
 }
 
 button.add_project_btn:active {
-    background-color: #46C989;
+    background-color: $button-pri-color-active;
     transform: translateY(2px);
   }

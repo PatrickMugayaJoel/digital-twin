@@ -1,5 +1,5 @@
 import React from 'react';
-import './SidePanel.css';
+import './SidePanel.scss';
 import IconsMenu from './../IconsMenu/IconsMenu';
 import ProjectsMenu from './../ProjectsMenu/ProjectsMenu';
 
