@@ -1,2 +1,2 @@
 # run express server
-node ../server.js
+sudo node server.js
