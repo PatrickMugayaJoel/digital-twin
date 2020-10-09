@@ -1,0 +1,2 @@
+cd /digitaltwin
+npm install
