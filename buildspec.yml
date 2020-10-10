@@ -3,20 +3,27 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 10  
+    #   nodejs: 10
     commands:
       - echo Installing nodejs...
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - npm install
+    #   - npm install
   build:
     commands:
       - echo Build started on `date`
-      - npm run-script build
+    #   - npm run-script build
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - *
+    - aws_scripts/*
+    - build/*
+    - public/*
+    - src/*
+    - appspec.yml
+    - craco.config.js
+    - package.json
+    - server.js
