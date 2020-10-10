@@ -6,9 +6,6 @@ phases:
       nodejs: 10  
     commands:
       - echo Installing nodejs...
-    #   - sudo apt update
-    #   - sudo apt install nodejs -y
-    #   - sudo apt install npm -y
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
@@ -16,22 +13,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-    #   - cd /digitaltwin
       - npm run-script build
   post_build:
     commands:
       - echo Build completed on `date`
-    #   - echo starting server on `date`
-    #   - cd /digitaltwin
-    #   - sudo nohup node ./server.js > server.log &
-    #   - exit
 artifacts:
   files:
-    - server.js
-    - craco.config.js
-    - appspec.yml
-    - public/*
-    - package.json
-    - node_modules/async/*
-    - aws_scripts/*
-    - build/*
+    - *
