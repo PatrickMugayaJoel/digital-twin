@@ -1,0 +1,41 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10  
+    commands:
+      - echo Installing nodejs...
+      - sudo apt update
+      - sudo apt install nodejs -y
+      - sudo apt install npm -y
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - cd /digitaltwin
+      - npm run-script build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+    #   - echo starting server on `date`
+    #   - cd /digitaltwin
+    #   - sudo nohup node ./server.js > server.log &
+    #   - exit
+# Include only the files required for your application to run.
+# Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
+# used only for building and testing.
+# ExpressJS apps will need other artifact directories included (bin/*, public/*, routes/*, views/* etc).
+artifacts:
+  files:
+    - server.js
+    - craco.config.js
+    - appspec.yml
+    - public/*
+    - package.json
+    - node_modules/async/*
+    - aws_scripts/*
+    - build/*
