@@ -1,20 +1,5 @@
 version: 0.2
 
-phases:
-  install:
-    commands:
-      - echo Installing nodejs...
-  pre_build:
-    commands:
-      - echo Installing source NPM dependencies...
-    #   - npm install
-  build:
-    commands:
-      - echo Build started on `date`
-    #   - npm run-script build
-  post_build:
-    commands:
-      - echo Build completed on `date`
 artifacts:
   files:
     - aws_scripts/*
