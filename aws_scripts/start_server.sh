@@ -1,2 +1,3 @@
 # run express server
-sudo node server.js
+cd /digitaltwin
+sudo node ./server.js
