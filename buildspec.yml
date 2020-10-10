@@ -2,8 +2,6 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-    #   nodejs: 10
     commands:
       - echo Installing nodejs...
   pre_build:
@@ -20,11 +18,9 @@ phases:
 artifacts:
   files:
     - aws_scripts/*
-    - build/*
     - public/*
     - src/*
     - appspec.yml
-    - buildspec.yml
     - craco.config.js
     - package.json
     - server.js
