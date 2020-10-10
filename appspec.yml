@@ -7,14 +7,14 @@ files:
 hooks:
   BeforeInstall:
     - location: aws_scripts/install_nodejs.sh
-      timeout: 300
+      timeout: 120
       runas: root
   AfterInstall:
     - location: aws_scripts/install_npm_packages.sh
-      timeout: 300
+      timeout: 120
       runas: root
     - location: aws_scripts/npm_build.sh
-      timeout: 300
+      timeout: 60
       runas: root
   ApplicationStart:
     - location: aws_scripts/start_server.sh
