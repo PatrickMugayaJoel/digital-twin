@@ -1,3 +1,3 @@
 # run express server
 cd /digitaltwin
-sudo node ./server.js
+sudo nohup node ./server.js > server.log &
