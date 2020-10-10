@@ -24,6 +24,7 @@ artifacts:
     - public/*
     - src/*
     - appspec.yml
+    - buildspec.yml
     - craco.config.js
     - package.json
     - server.js
