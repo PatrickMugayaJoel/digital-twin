@@ -6,7 +6,7 @@ import { faGrinTongueWink } from '@fortawesome/free-solid-svg-icons'
 function IconsMenu() {
   return (
     <div className="icons_menu grid-item">
-      <FontAwesomeIcon icon={faGrinTongueWink} />
+      {/* <FontAwesomeIcon icon={faGrinTongueWink} /> */}
     </div>
   );
 }
