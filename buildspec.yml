@@ -4,7 +4,7 @@ artifacts:
   files:
     - aws_scripts/*
     - public/*
-    - src/*
+    - src/**/*
     - appspec.yml
     - craco.config.js
     - package.json
