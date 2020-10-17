@@ -1,7 +1,7 @@
 import React from 'react';
 import './SidePanel.scss';
-import IconsMenu from './../IconsMenu/IconsMenu';
-import ProjectsMenu from './../ProjectsMenu/ProjectsMenu';
+import IconsMenu from '../IconsMenu/IconsMenu';
+import ProjectsMenu from '../ProjectsMenu/ProjectsMenu';
 
 function SidePanel() {
   return (

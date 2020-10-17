@@ -1,11 +1,11 @@
 import React from 'react';
 import './ProjectLink.scss';
 
-function ProjectLink() {
+const ProjectLink = props => {
   return (
     <li className="project_link_item">
-      <h3>Project Name</h3>
-      <span>city, state</span>
+      <h3>{props.name}</h3>
+      <span>{props.city}, {props.state}</span>
     </li>
   );
 }
