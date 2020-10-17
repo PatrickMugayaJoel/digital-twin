@@ -2,6 +2,8 @@
 
 li.project_link_item {
     // TODO Handle overflow
+    overflow: hidden;
+    margin-top: 1px;
     padding: 5px 10px;
     width: auto;
     background: $base-color-light;
@@ -17,4 +19,6 @@ li.project_link_item:hover, li.project_link_item:active {
 
 h3 {
     margin: 0px;
+    // display: inline-block;
+    white-space: nowrap;
 }

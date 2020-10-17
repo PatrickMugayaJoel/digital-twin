@@ -1,11 +1,11 @@
 import { ADD_PROJECT, GET_ALL_PROJECTS } from '../actionTypes'
 
-let nextId = 0
-export const addProject = name => ({
+let nextId = 3
+export const addProject = body => ({
   type: ADD_PROJECT,
   payload: {
     id: ++nextId,
-    name
+    ...body
   }
 })
 

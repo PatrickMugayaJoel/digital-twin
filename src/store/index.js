@@ -12,9 +12,14 @@ const initialState = {
     projects: [
         {
             id: 1,
-            name: "Project One",
-            city: "city1",
-            state: "state1"
+            name: "The Pentagon - Phase 2",
+            city: "Washington DC",
+            state: "USA"
+        }, {
+            id: 2,
+            name: "Alphabet Offices",
+            city: "Kampala",
+            state: "Uganda"
         }
     ]
 }

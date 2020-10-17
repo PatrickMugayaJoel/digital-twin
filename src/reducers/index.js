@@ -6,10 +6,7 @@ const projects = (state = [], action) => {
       case ADD_PROJECT:
         return [
           ...state,
-          {
-            id: action.id,
-            name: action.name
-          }
+          {...action.payload}
         ]
       default:
         return state

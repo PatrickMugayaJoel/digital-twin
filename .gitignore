@@ -12,6 +12,7 @@ package-lock.json
 /coverage
 
 /sandbox
+/src/components/sandbox
 
 # production
 /build

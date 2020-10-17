@@ -13,11 +13,13 @@ class ProjectsMenu extends React.Component {
       <div className="projects_field grid-item">
         <div className="projects_heading">
           <h1>PROJECTS</h1>
-          <span> &#9899; 52</span>
+          <span> &#9899; {projects.length}</span>
         </div>
         <ul className="project_links">
           {projects.map(project => (
-            <ProjectLink key={projects.id} {...project} /* onClick={() => toggleProject(project.id)} */ />
+            <ProjectLink key={projects.id} {...project}
+            /* onClick={() => toggleProject(project.id)} */
+            />
           ))}
         </ul>
         <PrimaryButton /* onClick={() => renderForm(} */ />
