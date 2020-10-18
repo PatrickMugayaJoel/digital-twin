@@ -14,7 +14,7 @@ hooks:
       timeout: 120
       runas: root
     - location: aws_scripts/npm_build.sh
-      timeout: 120
+      timeout: 240
       runas: root
   ApplicationStart:
     - location: aws_scripts/start_server.sh
