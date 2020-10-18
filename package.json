@@ -25,6 +25,7 @@
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "cesium": "^1.73.0",
+    "copy-webpack-plugin": "^6.2.1",
     "css-loader": "3.4.2",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
@@ -153,5 +154,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "strip-pragma-loader": "^1.0.0"
   }
 }

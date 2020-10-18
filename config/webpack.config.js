@@ -24,6 +24,7 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -324,6 +325,22 @@ module.exports = function(webpackEnv) {
         // Disable require.ensure as it's not a standard language feature.
         { parser: { requireEnsure: false } },
 
+        // Remove cesium pragmas
+        {
+          test: /\.js$/,
+          enforce: 'pre',
+          include: path.resolve(__dirname, 'node_modules/cesium/Source'),
+          sideEffects: false,
+          use: [{
+              loader: 'strip-pragma-loader',
+              options: {
+                  pragmas: {
+                      debug: false
+                  }
+              }
+          }]
+        },
+
         // First, run the linter.
         // It's important to do this before Babel processes the JS.
         {
@@ -534,6 +551,19 @@ module.exports = function(webpackEnv) {
             : undefined
         )
       ),
+      // Copy Cesium Assets, Widgets, and Workers to a static directory
+      new CopyWebpackPlugin({
+          patterns: [
+              { from: 'node_modules/cesium/Build/Cesium/Workers', to: 'Cesium/Workers' },
+              { from: 'node_modules/cesium/Build/Cesium/ThirdParty', to: 'Cesium/ThirdParty' },
+              { from: 'node_modules/cesium/Build/Cesium/Assets', to: 'Cesium/Assets' },
+              { from: 'node_modules/cesium/Build/Cesium/Widgets', to: 'Cesium/Widgets' }
+          ],
+      }),
+      new webpack.DefinePlugin({
+          // Define relative base path in cesium for loading assets
+          CESIUM_BASE_URL: JSON.stringify('Cesium/')
+      }),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358
@@ -653,6 +683,10 @@ module.exports = function(webpackEnv) {
     // Some libraries import Node modules but don't use them in the browser.
     // Tell webpack to provide empty mocks for them so importing them works.
     node: {
+      Buffer: false,
+      http: "empty",
+      https: "empty",
+      zlib: "empty",
       module: 'empty',
       dgram: 'empty',
       dns: 'mock',
