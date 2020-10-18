@@ -8,6 +8,5 @@ artifacts:
     - scripts/*
     - src/**/*
     - appspec.yml
-    - craco.config.js
     - package.json
     - server.js
