@@ -3,7 +3,9 @@ version: 0.2
 artifacts:
   files:
     - aws_scripts/*
+    - config/**/*
     - public/*
+    - scripts/*
     - src/**/*
     - appspec.yml
     - craco.config.js
