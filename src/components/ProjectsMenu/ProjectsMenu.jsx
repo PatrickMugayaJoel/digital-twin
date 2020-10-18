@@ -16,11 +16,11 @@ class ProjectsMenu extends React.Component {
           <span> &#9899; {projects.length}</span>
         </div>
         <ul className="project_links">
-          {projects.map(project => (
-            <ProjectLink key={projects.id} {...project}
+          {projects.map((project, index) => {
+            return <ProjectLink key={index} {...project}
             /* onClick={() => toggleProject(project.id)} */
             />
-          ))}
+          })}
         </ul>
         <PrimaryButton /* onClick={() => renderForm(} */ />
       </div>
