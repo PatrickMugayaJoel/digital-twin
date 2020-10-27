@@ -1,3 +1,4 @@
 // action types
 export const ADD_PROJECT = "ADD_PROJECT";
-export const GET_ALL_PROJECTS = "GET_ALL_PROJECTS"; 
+export const TOGGLE_LOGIN = "TOGGLE_LOGIN";
+export const FETCH_ALL_PROJECTS = "FETCH_ALL_PROJECTS"; 

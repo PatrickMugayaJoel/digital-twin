@@ -17,8 +17,13 @@ li.project_link_item:hover, li.project_link_item:active {
     border: 1px solid $base-color-dark;
 }
 
-h3 {
+h4 {
     margin: 0px;
     // display: inline-block;
     white-space: nowrap;
+}
+
+.project_link_item span {
+    font-style: italic;
+    font-size: smaller;
 }

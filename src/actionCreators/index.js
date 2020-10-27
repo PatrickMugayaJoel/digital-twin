@@ -1,4 +1,4 @@
-import { ADD_PROJECT, GET_ALL_PROJECTS } from '../actionTypes'
+import { ADD_PROJECT, FETCH_ALL_PROJECTS, TOGGLE_LOGIN } from '../actionTypes'
 
 let nextId = 3
 export const addProject = body => ({
@@ -10,5 +10,10 @@ export const addProject = body => ({
 })
 
 export const getAllProjects = () => ({
-  type: GET_ALL_PROJECTS
+  type: FETCH_ALL_PROJECTS
+})
+
+export const toggleLogin = body => ({
+  type: TOGGLE_LOGIN,
+  payload: body
 })

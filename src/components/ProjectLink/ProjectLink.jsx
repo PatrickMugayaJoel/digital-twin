@@ -8,7 +8,7 @@ const ProjectLink = props => {
     data-tip={props.name}
     data-for={String(props.id)} 
     >
-      <h3>{props.name}</h3>
+      <h4>{props.name}</h4>
       <span>{props.city}, {props.state}</span>
       <ReactTooltip id={String(props.id)} />
     </li>

@@ -21,7 +21,12 @@ const initialState = {
             city: "Kampala",
             state: "Uganda"
         }
-    ]
+    ],
+    auth: {
+        username: "Joel",
+        password: "joel",
+        isLoggedin: false
+    }
 }
 
 const store = createStore(
