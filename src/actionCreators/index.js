@@ -1,6 +1,6 @@
-import { ADD_PROJECT, FETCH_ALL_PROJECTS, TOGGLE_LOGIN } from '../actionTypes'
+import { ADD_PROJECT, FETCH_ALL_PROJECTS, TOGGLE_LOGIN, REGISTER, LOGOUT } from '../actionTypes'
 
-let nextId = 3
+let nextId = 3 // TODO auto generate id
 export const addProject = body => ({
   type: ADD_PROJECT,
   payload: {
@@ -15,5 +15,15 @@ export const getAllProjects = () => ({
 
 export const toggleLogin = body => ({
   type: TOGGLE_LOGIN,
+  payload: body
+})
+
+export const register = body => ({
+  type: REGISTER,
+  payload: body
+})
+
+export const logout = body => ({
+  type: LOGOUT,
   payload: body
 })

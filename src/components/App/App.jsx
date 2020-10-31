@@ -3,7 +3,7 @@ import './App.scss';
 import { connect } from 'react-redux'
 import SidePanel from '../SidePanel/SidePanel';
 import CesiumView from '../CesiumView/CesiumView';
-import Login from '../Login/Login';
+import { Redirect } from "react-router-dom";
 
 // read about
 // const CesiumView = React.lazy(() => import('../CesiumView/CesiumView'))
@@ -16,7 +16,7 @@ function App(props) {
       <SidePanel />
       <CesiumView  className="CS_view"/>
     </div>
-  ) : <Login {...props} />;
+  ) : <Redirect to="/login" />;
 }
 
 const mapReduxStateToProps = state => {
