@@ -8,6 +8,10 @@ https://getbootstrap.com/docs/4.4/getting-started/theming/
 
 @import "~bootstrap/scss/bootstrap";
 
+html, body {
+  height: 100%;
+}
+
 body {
   padding: 0px;
   margin: 0px;
@@ -18,7 +22,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 400px;
   min-width: 900px;
-  height: 99.7vh;
+  // height: 99.7vh;
   color: #000000;
   background-color: #000000;
 }

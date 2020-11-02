@@ -1,18 +1,27 @@
 import React from 'react'
 import './Template.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faSignInAlt, faUserPlus, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
 
 const Template = props => {
 
   return (
-    <div>
-        <div><h1>This is the wrapper</h1></div>
-          <ul>
-            <Link to="/">Home</Link>
-            <Link to="/login">Signin</Link>
-            <Link to="/register">SignUp</Link>
-          </ul>
-        {props.children}
+    <div className="wrapper row">
+          <div className="col-sm-3 sidebar">
+            <Link className="sidebarlink" to="/"><FontAwesomeIcon icon={faHome} /> Home</Link>
+            <Link className="sidebarlink" to="/register"><FontAwesomeIcon icon={faUserPlus} /> SignUp</Link>
+            <Link className="sidebarlink" to="/login"><FontAwesomeIcon icon={faSignInAlt} /> Signin</Link>
+            <Link className="sidebarlink" to="/logout"><FontAwesomeIcon icon={faSignOutAlt} /> Signout</Link>
+          </div>
+          <div className="col-sm-9">
+            <div className="content">
+              {props.children}
+            </div>
+            <footer class="page-footer font-small blue">
+              <div class="footer-copyright text-center">© 2020 Copyright: Digital Twin</div>
+            </footer>
+          </div>
     </div>
   )
 }

@@ -12,11 +12,37 @@
     height: 100%;
 }
 
-.cesium-geocoder-searchButton {
-    top: 11px !important;
-    right: 11px !important;
+span.cesium-geocoder-searchButton {
+    top: 6px !important;
+    right: -3px !important;
 }
 
-.logout_link {
+.cesium-display-icon {
     position: absolute;
+    z-index: 1;
+    background-color: #303336;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 32px;
+    top: 12px;
+    right: 200px;
+    height: 33px;
+}
+
+.cesium-display-icon:hover {
+    background-color: #48b;
+    border-color: #aef;
+    box-shadow: 0 0 8px #fff;
+}
+
+.cesium-display-icon a {
+    color: #edffff;
+    height: inherit;
+}
+
+.cesium-display-icon svg {
+    height: inherit;
+    width: 25px !important;
+    margin: 0 4px;
 }
