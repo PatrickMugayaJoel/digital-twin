@@ -45,3 +45,18 @@ code {
 form {
   padding: 10px;
 }
+
+span.error {
+  font-size: small;
+  color: $danger;
+}
+
+.disabled-btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: lightgray;
+}
+
+.input-error {
+  box-shadow: 0 0 0 0.2rem $danger;
+}

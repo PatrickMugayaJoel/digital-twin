@@ -3,50 +3,74 @@ import './SignUp.scss';
 import { connect } from 'react-redux'
 import { register } from '../../actionCreators'
 import Template from '../Template/Template'
+import validator from './validator';
+import { Formik } from "formik";
 
 const SignUp = props => {
   const input = {}
-  const handleOnSubmit = e => {
-    e.preventDefault()
-    if (
-      !(input.username.value.trim().length > 2) ||
-      !(input.password2.value === input.password.value)
-    ) {return}
+  const initialValues = {
+    username: "",
+    password: "",
+    password2: ""
+  };
 
-    // dispatches actions to add todo
-    props.register({
-      username: input.username.value,
-      password: input.password.value,
-      isLoggedin: true
-    })
-    window.location.href = "/projects";
-
-    // sets state back to empty string
-    input.username.value=''
-    input.password.value=''
-    input.password2.value=''
+  const submitForm = values => {
+        props.register({
+        username: values.username,
+        password: values.password,
+        isLoggedin: true
+      })
+      window.location.href = "/projects";
   }
 
   return (
-    <Template>
-      <form onSubmit={handleOnSubmit}>
-        <div><h3>SignUp</h3></div>
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
-          <input type="text" className="form-control" id="username" placeholder="Username" ref={node => (input.username = node)} required/>
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input type="password" className="form-control" id="password" placeholder="Password" ref={node => (input.password = node)} required/>
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Confirm Password</label>
-          <input type="password" className="form-control" id="password2" placeholder="Confirm Password" ref={node => (input.password2 = node)} required/>
-        </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-        <button type="reset" className="btn btn-danger float-right">Cancel</button>
-      </form>
-    </Template>
+    <Formik initialValues={initialValues} validate={validator} onSubmit={submitForm}>
+      {formik => {
+        return (<Template>
+          <form onSubmit={formik.handleSubmit}>
+            <div><h3>SignUp</h3></div>
+            <div className="form-group">
+              <label htmlFor="username">Username</label>
+              <input type="text"
+              id="username"
+              placeholder="Username"
+              value={formik.values.username}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={formik.errors.username && formik.touched.username ? "input-error form-control" : "form-control"}
+              />
+              {(formik.errors.username && formik.touched.username) && <span className="error">{formik.errors.username}</span>}
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input type="password"
+              id="password"
+              placeholder="Password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={formik.errors.password && formik.touched.password ? "input-error form-control" : "form-control"}/>
+              {(formik.errors.password && formik.touched.password) && <span className="error">{formik.errors.password}</span>}
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Confirm Password</label>
+              <input type="password"
+              id="password2"
+              placeholder="Confirm Password"
+              value={formik.values.password2}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={formik.errors.password2 && formik.touched.password2 ? "input-error form-control" : "form-control"}/>
+              {(formik.errors.password2 && formik.touched.password2) && <span className="error">{formik.errors.password2}</span>}
+            </div>
+            <button type="submit"
+            className={formik.dirty && formik.isValid ? "btn btn-primary" : "btn btn-primary disabled-btn"}
+            >Submit</button>
+            <button type="reset" className="btn btn-danger float-right">Cancel</button>
+          </form>
+        </Template>)
+      }}
+    </Formik>
   )
 }
 
