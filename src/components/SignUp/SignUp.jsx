@@ -7,7 +7,6 @@ import validator from './validator';
 import { Formik } from "formik";
 
 const SignUp = props => {
-  const input = {}
   const initialValues = {
     username: "",
     password: "",
