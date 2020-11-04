@@ -65,7 +65,7 @@ const SignUp = props => {
             <button type="submit"
             className={formik.dirty && formik.isValid ? "btn btn-primary" : "btn btn-primary disabled-btn"}
             >Submit</button>
-            <button type="reset" className="btn btn-danger float-right">Cancel</button>
+            <button type="buttom" onClick={formik.resetForm} className="btn btn-danger float-right">Cancel</button>
           </form>
         </Template>)
       }}

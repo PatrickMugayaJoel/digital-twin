@@ -18,8 +18,8 @@ const Template = props => {
             <div className="content">
               {props.children}
             </div>
-            <footer class="page-footer font-small blue">
-              <div class="footer-copyright text-center">© 2020 Copyright: Digital Twin</div>
+            <footer className="page-footer font-small blue">
+              <div className="footer-copyright text-center">© 2020 Copyright: Digital Twin</div>
             </footer>
           </div>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Login.scss';
 import { connect } from 'react-redux'
 import { toggleLogin } from '../../actionCreators'
@@ -6,16 +6,20 @@ import Template from '../Template/Template'
 
 const Login = props => {
   const input = {}
-  let invalidLogin = false
+  const [invalidLogin, setInvalidLogin] = useState(false)
   const handleOnSubmit = e => {
+    console.log("handleOnSubmit")
     e.preventDefault()
     if (
       !(input.username.value.trim() === props.auth.username) ||
       !(input.password.value === props.auth.password)
     ) {
-      invalidLogin = true
+      console.log("invalidLogin = true")
+      setInvalidLogin(true)
     } else {
-      invalidLogin = false
+      console.log("invalidLogin = false")
+      // invalidLogin = false
+      submitForm({})
     }
   }
 
@@ -33,7 +37,7 @@ const Login = props => {
     <Template>
       <form onSubmit={handleOnSubmit}>
         <div><h3>LOGIN</h3></div>
-        {invalidLogin && <span className="error">Invalid Login credentials!</span>}
+        {invalidLogin && <div className="login-error"><span className="error" style={{ }}>Invalid Login credentials!</span></div>}
         <div className="form-group">
           <label htmlFor="username">Username</label>
           <input type="text" className="form-control" id="username" placeholder="Username" ref={node => (input.username = node)} required/>
