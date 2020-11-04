@@ -35,7 +35,7 @@ const Login = props => {
 
   return (
     <Template>
-      <form onSubmit={handleOnSubmit}>
+      <form className="loginform" onSubmit={handleOnSubmit}>
         <div><h3>LOGIN</h3></div>
         {invalidLogin && <div className="login-error"><span className="error" style={{ }}>Invalid Login credentials!</span></div>}
         <div className="form-group">
