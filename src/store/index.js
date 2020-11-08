@@ -13,6 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 const persistConfig = {
     key: 'root',
     storage,
+    blacklist: ['target']
 }
 
 const persistedReducer = persistReducer(persistConfig, reducer)
@@ -25,18 +26,32 @@ const initialState = {
             id: 1,
             name: "The Pentagon - Phase 2",
             city: "Washington DC",
-            state: "USA"
+            state: "USA",
+            assetId: 181355,
+            longitude: -2.1372577512,
+            latitude: 17.6247953124,
+            height: 345.9999999991
         }, {
             id: 2,
             name: "Alphabet Offices",
             city: "Kampala",
-            state: "Uganda"
+            state: "Uganda",
+            assetId: 181501,
+            longitude: 22.3692506111,
+            latitude: -30.2452524486,
+            height: 1064.1063148356
         }
     ],
     auth: {
         username: "Joel",
         password: "joel",
         isLoggedin: false
+    },
+    target: {
+        assetId: 0,
+        longitude: -122.4175,
+        latitude: 37.655,
+        height: 400
     }
 }
 

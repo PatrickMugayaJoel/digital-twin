@@ -1,4 +1,4 @@
-import { ADD_PROJECT, FETCH_ALL_PROJECTS, TOGGLE_LOGIN, REGISTER, LOGOUT } from '../actionTypes'
+import { ADD_PROJECT, FETCH_ALL_PROJECTS, TOGGLE_LOGIN, REGISTER, LOGOUT, SET_TARGET } from '../actionTypes'
 
 let nextId = 3 // TODO auto generate id
 export const addProject = body => ({
@@ -20,6 +20,11 @@ export const toggleLogin = body => ({
 
 export const register = body => ({
   type: REGISTER,
+  payload: body
+})
+
+export const setTarget = body => ({
+  type: SET_TARGET,
   payload: body
 })
 

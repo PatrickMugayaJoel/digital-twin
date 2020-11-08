@@ -1,14 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import './ProjectsMenu.scss';
+import { setTarget } from "../../actionCreators";
 import ProjectLink from '../ProjectLink/ProjectLink';
 import PrimaryButton from '../PrimaryButton/PrimaryButton';
 
 
 class ProjectsMenu extends React.Component {
+  toggleProject(project, setTarget) {
+    setTarget({
+      assetId: project.assetId,
+      longitude: project.longitude,
+      latitude: project.latitude,
+      height: project.height
+    });
+  }
 
   render() {
     const projects = this.props.projects;
+    const toggleProject = this.toggleProject;
     return (
       <div className="projects_field grid-item">
         <div className="projects_heading">
@@ -18,7 +28,7 @@ class ProjectsMenu extends React.Component {
         <ul className="project_links">
           {projects.map((project, index) => {
             return <ProjectLink key={index} {...project}
-            /* onClick={() => toggleProject(project.id)} */
+            onClick={() => toggleProject(project, this.props.setTarget)}
             />
           })}
         </ul>
@@ -27,6 +37,8 @@ class ProjectsMenu extends React.Component {
     );
   }
 }
+
+const mapDispatchToProps = { setTarget };
 
 // ... computed data from redux state and optionally ownProps
 const mapReduxStateToProps = (state /*, ownProps*/) => {
@@ -40,4 +52,4 @@ const mapReduxStateToProps = (state /*, ownProps*/) => {
 
 // `connect` returns a new function that accepts the component to wrap.
 // we call that function with the component to return the connected, wrapper component
-export default connect(mapReduxStateToProps)(ProjectsMenu)
+export default connect(mapReduxStateToProps, mapDispatchToProps)(ProjectsMenu)

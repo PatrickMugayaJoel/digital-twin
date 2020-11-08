@@ -7,6 +7,7 @@ const ProjectLink = props => {
     <li className="project_link_item"
     data-tip={props.name}
     data-for={String(props.id)} 
+    onClick={props.onClick}
     >
       <h4>{props.name}</h4>
       <span>{props.city}, {props.state}</span>

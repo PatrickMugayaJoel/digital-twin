@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { ADD_PROJECT, FETCH_ALL_PROJECTS, TOGGLE_LOGIN, REGISTER, LOGOUT } from '../actionTypes'
+import { ADD_PROJECT, FETCH_ALL_PROJECTS, TOGGLE_LOGIN, REGISTER, LOGOUT, SET_TARGET } from '../actionTypes'
 
 const projects = (state = [], action) => {
     switch (action.type) {
@@ -29,6 +29,18 @@ const auth = (state = {}, action) => {
   }
 }
 
+const target = (state = {}, action) => {
+  switch (action.type) {
+    case SET_TARGET:
+      return {
+        ...state,
+        ...action.payload
+      }
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
-  projects, auth,
+  projects, auth, target,
 })
