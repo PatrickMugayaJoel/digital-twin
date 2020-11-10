@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 const persistConfig = {
     key: 'root',
     storage,
-    blacklist: ['target']
+    whitelist: ['auth']
 }
 
 const persistedReducer = persistReducer(persistConfig, reducer)
