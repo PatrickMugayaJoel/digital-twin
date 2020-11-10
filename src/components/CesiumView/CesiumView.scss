@@ -13,8 +13,8 @@
 }
 
 span.cesium-geocoder-searchButton {
-    top: 6px !important;
-    right: -3px !important;
+    top: 11px !important;
+    right: 10px !important;
 }
 
 .cesium-display-icon {
@@ -25,9 +25,10 @@ span.cesium-geocoder-searchButton {
     border-radius: 4px;
     cursor: pointer;
     width: 32px;
-    top: 12px;
-    right: 200px;
+    top: 17px;
+    // right: 210px;
     height: 33px;
+    margin-left: 17px;
 }
 
 .cesium-display-icon:hover {

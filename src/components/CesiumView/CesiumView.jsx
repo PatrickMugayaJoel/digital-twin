@@ -38,7 +38,6 @@ function CesiumView(props) {
   return <div className="cesium_field" >
     <div ref={cesiumContainer}>
       <div className="logout_link cesium-display-icon">
-        {props.target.assetId}
         <Link to="/logout"><FontAwesomeIcon icon={faSignOutAlt} /></Link>
       </div>
     </div>
