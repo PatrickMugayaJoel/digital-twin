@@ -10,6 +10,7 @@ import "cesium/Build/Cesium/Widgets/widgets.css";
 
 function CesiumView(props) {
   const cesiumContainer = useRef();
+  console.log(props.target)
 
   // Your access token can be found at: https://cesium.com/ion/tokens.
   Cesium.Ion.defaultAccessToken = process.env.REACT_APP_CESIUM_TOKEN;
