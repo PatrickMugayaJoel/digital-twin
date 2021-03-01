@@ -1,3 +1,4 @@
+/*eslint no-unused-vars: 0*/
 import React from 'react';
 import './SidePanel.scss';
 import IconsMenu from '../IconsMenu/IconsMenu';

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { ADD_PROJECT, FETCH_ALL_PROJECTS, TOGGLE_LOGIN, REGISTER, LOGOUT, SET_TARGET } from '../actionTypes'
+import { ADD_PROJECT, FETCH_ALL_PROJECTS, SET_ERROR, TOGGLE_LOGIN, REGISTER, LOGOUT, SET_TARGET } from '../actionTypes'
 
 const projects = (state = [], action) => {
     switch (action.type) {

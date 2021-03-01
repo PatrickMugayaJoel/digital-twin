@@ -1,15 +1,16 @@
-import React from "react";
-import "./AddProject.scss";
-import { connect } from "react-redux";
-import { addProject } from "../../actionCreators";
-import validator from "./validator";
-import { Formik } from "formik";
+/*eslint no-unused-vars: 0*/
+import React from 'react';
+import './AddProject.scss';
+import { connect } from 'react-redux';
+import { addProject } from '../../actionCreators';
+import validator from './validator';
+import { Formik } from 'formik';
 
 const AddProject = (props) => {
   const initialValues = {
-    name: "",
-    city: "",
-    state: "",
+    name: '',
+    city: '',
+    state: '',
   };
 
   const submitForm = (values) => {
@@ -19,11 +20,7 @@ const AddProject = (props) => {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validate={validator}
-      onSubmit={submitForm}
-    >
+    <Formik initialValues={initialValues} validate={validator} onSubmit={submitForm}>
       {(formik) => {
         return (
           <div>
@@ -37,13 +34,9 @@ const AddProject = (props) => {
                   value={formik.values.name}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={
-                    formik.errors.name && formik.touched.name
-                      ? "input-error form-control"
-                      : "form-control"
-                  }
+                  className={formik.errors.name && formik.touched.name ? 'input-error form-control' : 'form-control'}
                 />
-                {(formik.errors.name && formik.touched.name) ? (
+                {formik.errors.name && formik.touched.name ? (
                   <span className="error">{formik.errors.name}</span>
                 ) : (
                   <small id="nameHelp" className="form-text text-muted">
@@ -60,15 +53,9 @@ const AddProject = (props) => {
                   value={formik.values.city}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={
-                    formik.errors.city && formik.touched.city
-                      ? "input-error form-control"
-                      : "form-control"
-                  }
+                  className={formik.errors.city && formik.touched.city ? 'input-error form-control' : 'form-control'}
                 />
-                {formik.errors.city && formik.touched.city && (
-                  <span className="error">{formik.errors.city}</span>
-                )}
+                {formik.errors.city && formik.touched.city && <span className="error">{formik.errors.city}</span>}
               </div>
               <div className="form-group">
                 <label htmlFor="state">State</label>
@@ -79,28 +66,17 @@ const AddProject = (props) => {
                   value={formik.values.state}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={
-                    formik.errors.state && formik.touched.state
-                      ? "input-error form-control"
-                      : "form-control"
-                  }
+                  className={formik.errors.state && formik.touched.state ? 'input-error form-control' : 'form-control'}
                 />
-                {formik.errors.state && formik.touched.state && (
-                  <span className="error">{formik.errors.state}</span>
-                )}
+                {formik.errors.state && formik.touched.state && <span className="error">{formik.errors.state}</span>}
               </div>
-              <button type="submit"
-              className={
-                formik.dirty && formik.isValid
-                  ? "btn btn-primary"
-                  : "btn btn-primary disabled-btn"
-              }>
+              <button
+                type="submit"
+                className={formik.dirty && formik.isValid ? 'btn btn-primary' : 'btn btn-primary disabled-btn'}
+              >
                 Submit
               </button>
-              <button
-                className="btn btn-danger float-right"
-                onClick={props.close}
-              >
+              <button className="btn btn-danger float-right" onClick={props.close}>
                 Cancel
               </button>
             </form>

@@ -1,0 +1,8 @@
+node_modules
+bin
+build
+sandbox
+config
+scripts
+src/serviceWorker.js
+src/store/index.js

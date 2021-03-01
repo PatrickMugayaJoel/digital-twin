@@ -1,29 +1,30 @@
 @import 'src/theme.scss';
 
 li.project_link_item {
-    // TODO Handle overflow
-    overflow: hidden;
-    margin-top: 1px;
-    padding: 5px 10px;
-    width: auto;
-    background: $base-color-light;
-    border: 1px solid $border-color;
-    color: $base-color-dark;
-    cursor: pointer;
+  // TODO Handle overflow
+  overflow: hidden;
+  margin-top: 1px;
+  padding: 5px 10px;
+  width: auto;
+  background: $base-color-light;
+  border: 1px solid $border-color;
+  color: $base-color-dark;
+  cursor: pointer;
 }
 
-li.project_link_item:hover, li.project_link_item:active {
-    // background: #053A79;
-    border: 1px solid $base-color-dark;
+li.project_link_item:hover,
+li.project_link_item:active {
+  // background: #053A79;
+  border: 1px solid $base-color-dark;
 }
 
 h4 {
-    margin: 0px;
-    // display: inline-block;
-    white-space: nowrap;
+  margin: 0px;
+  // display: inline-block;
+  white-space: nowrap;
 }
 
 .project_link_item span {
-    font-style: italic;
-    font-size: smaller;
+  font-style: italic;
+  font-size: smaller;
 }

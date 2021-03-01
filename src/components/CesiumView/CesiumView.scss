@@ -1,49 +1,49 @@
 .cesium_field {
-    flex-grow: 2;
-    margin: 2px 2px 2px 2px;
-    width: 100%;
-    min-height: 400px;
-    height: calc(100% - 4px);
-    border-radius: 4px;
-    background-color: darkslategrey;
+  flex-grow: 2;
+  margin: 2px 2px 2px 2px;
+  width: 100%;
+  min-height: 400px;
+  height: calc(100% - 4px);
+  border-radius: 4px;
+  background-color: darkslategrey;
 }
 
 .cesium_field > :first-child {
-    height: 100%;
+  height: 100%;
 }
 
 span.cesium-geocoder-searchButton {
-    top: 11px !important;
-    right: 10px !important;
+  top: 11px !important;
+  right: 10px !important;
 }
 
 .cesium-display-icon {
-    position: absolute;
-    z-index: 1;
-    background-color: #303336;
-    border: 1px solid #444;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 32px;
-    top: 17px;
-    // right: 210px;
-    height: 33px;
-    margin-left: 17px;
+  position: absolute;
+  z-index: 1;
+  background-color: #303336;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 32px;
+  top: 17px;
+  // right: 210px;
+  height: 33px;
+  margin-left: 17px;
 }
 
 .cesium-display-icon:hover {
-    background-color: #48b;
-    border-color: #aef;
-    box-shadow: 0 0 8px #fff;
+  background-color: #48b;
+  border-color: #aef;
+  box-shadow: 0 0 8px #fff;
 }
 
 .cesium-display-icon a {
-    color: #edffff;
-    height: inherit;
+  color: #edffff;
+  height: inherit;
 }
 
 .cesium-display-icon svg {
-    height: inherit;
-    width: 25px !important;
-    margin: 0 4px;
+  height: inherit;
+  width: 25px !important;
+  margin: 0 4px;
 }

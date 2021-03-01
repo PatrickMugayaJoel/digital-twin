@@ -1,10 +1,10 @@
+/*eslint no-unused-vars: 0*/
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import './ProjectsMenu.scss';
-import { setTarget } from "../../actionCreators";
+import { setTarget } from '../../actionCreators';
 import ProjectLink from '../ProjectLink/ProjectLink';
 import PrimaryButton from '../PrimaryButton/PrimaryButton';
-
 
 class ProjectsMenu extends React.Component {
   toggleProject(project, setTarget) {
@@ -12,7 +12,7 @@ class ProjectsMenu extends React.Component {
       assetId: project.assetId,
       longitude: project.longitude,
       latitude: project.latitude,
-      height: project.height
+      height: project.height,
     });
   }
 
@@ -27,9 +27,7 @@ class ProjectsMenu extends React.Component {
         </div>
         <ul className="project_links">
           {projects.map((project, index) => {
-            return <ProjectLink key={index} {...project}
-            onClick={() => toggleProject(project, this.props.setTarget)}
-            />
+            return <ProjectLink key={index} {...project} onClick={() => toggleProject(project, this.props.setTarget)} />;
           })}
         </ul>
         <PrimaryButton /* onClick={() => renderForm(} */ />
@@ -46,10 +44,10 @@ const mapReduxStateToProps = (state /*, ownProps*/) => {
   // that take state and return your required data.
   // eg. import {getProjects} then in here return {projects: getProjects(state)}
   return {
-    projects: state.projects
-  }
-}
+    projects: state.projects,
+  };
+};
 
 // `connect` returns a new function that accepts the component to wrap.
 // we call that function with the component to return the connected, wrapper component
-export default connect(mapReduxStateToProps, mapDispatchToProps)(ProjectsMenu)
+export default connect(mapReduxStateToProps, mapDispatchToProps)(ProjectsMenu);

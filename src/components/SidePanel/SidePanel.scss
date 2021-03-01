@@ -1,14 +1,14 @@
 @import 'src/theme.scss';
 
 .side_panel {
-    margin: 0px;
-    padding: 0px;
-    width: 40%;
-    flex-grow: 1;
-    min-width: 250px;
-    // border-radius: 5px;
-    background: $base-color-mid_dark;
-    height: 100%;
-    display: inline-grid;
-    grid-template-columns: 20% 80%;
+  margin: 0px;
+  padding: 0px;
+  width: 40%;
+  flex-grow: 1;
+  min-width: 250px;
+  // border-radius: 5px;
+  background: $base-color-mid_dark;
+  height: 100%;
+  display: inline-grid;
+  grid-template-columns: 20% 80%;
 }

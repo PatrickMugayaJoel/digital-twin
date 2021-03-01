@@ -1,17 +1,16 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { logout } from '../../actionCreators'
+import { connect } from 'react-redux';
+import { logout } from '../../actionCreators';
 
-const Logout = props => {
+const Logout = (props) => {
   props.logout({
     username: '',
     password: '',
-    isLoggedin: false
-  })
+    isLoggedin: false,
+  });
 
-  window.location.href = "/";
+  window.location.href = '/';
 
-  return null
-}
+  return null;
+};
 
-export default connect(null, { logout })(Logout)
+export default connect(null, { logout })(Logout);

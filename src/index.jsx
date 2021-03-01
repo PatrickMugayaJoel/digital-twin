@@ -7,15 +7,13 @@ import SignUp from './components/SignUp/SignUp';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store, { persistor } from './store';
-import { PersistGate } from 'redux-persist/integration/react'
+import { PersistGate } from 'redux-persist/integration/react';
 import Home from './components/Home/Home';
 import Logout from './components/Logout/Logout';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { getAllProjects } from './actionCreators'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // store.dispatch(getAllProjects())
 
@@ -42,6 +40,7 @@ ReactDOM.render(
             </Route>
           </Switch>
         </Router>
+        <ToastContainer/>
       </PersistGate>
     </Provider>
   </React.StrictMode>,
