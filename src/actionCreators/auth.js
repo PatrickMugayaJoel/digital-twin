@@ -14,7 +14,8 @@ export const register = (body, props) => dispatch => {
             type: REGISTER,
             payload: response.data
         });
-        props.history.push('/projects');
+        // props.history.push('/projects');
+        window.location.href = '/projects';
     })
     .catch(errorHandler);
 }
