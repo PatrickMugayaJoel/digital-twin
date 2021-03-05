@@ -11,9 +11,6 @@ const createUser = async (userBody) => {
   if (await User.isUsernameTaken(userBody.username)) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Username already taken');
   }
-  if (await User.isEmailTaken(userBody.email)) {
-    throw new ApiError(httpStatus.BAD_REQUEST, 'Username already taken');
-  }
   const user = await User.create(userBody);
   return user;
 };
